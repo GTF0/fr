@@ -187,10 +187,10 @@ async def ban(ctx, member: discord.Member, *, reason=None):
     else:
         await ctx.send("You are not authorized to use this command.") 
 
-
-
-
-
+@client.command()
+async def ping(ctx):
+    latency = client.latency * 1000  # calculate latency in milliseconds
+    await ctx.send(f'Pong! Latency: {latency:.2f}ms')
 
 
 
